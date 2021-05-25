@@ -33,7 +33,7 @@ void freetree(node* r);     // 메모리 해제;
 
 int num = 0;
 
-char *dc_c[26][MAX];
+char dc_c[26][MAX];
 char dc_a[26];
 
 char a[MAX];
@@ -259,8 +259,8 @@ void print_tree(node* r, int n, char* code) {
             strcpy(tmp, &r->alpa);
             strcpy(&dc_a[num], tmp);
 
-            strcpy(t, code);
-            strcpy(dc_c[num], t);
+            strncpy(t, code);
+            strncpy(dc_c[num], t);
 
             num++;
         }
